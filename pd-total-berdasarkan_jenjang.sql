@@ -1,0 +1,5 @@
+SELECT "sekolah"."jenjang", COUNT(1) AS "jumlah" 
+FROM "datamart"."peserta_didik"
+LEFT JOIN "datamart"."sekolah" AS "sekolah" ON "datamart"."peserta_didik"."sekolah_id"="sekolah"."sekolah_id"
+GROUP BY "sekolah"."jenjang"
+ORDER BY "sekolah"."jenjang"
